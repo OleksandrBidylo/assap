@@ -15,12 +15,7 @@ const upload = multer();
 const PORT = process.env.PORT || 3000;
 
 // Настройка CORS — разрешаем запросы с localhost:5174 (твой фронтенд)
-app.use(
-  cors({
-    origin: "http://localhost:5174",
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // Данные из .env
 const accountName = process.env.AZURE_STORAGE_ACCOUNT_NAME;
